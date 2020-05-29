@@ -6,6 +6,18 @@ const occurencesOf = function (char, str) {
   return count
 }
 
-console.log(occurencesOf("l", "hello world"))
-console.log(occurencesOf(" ", "bob likes tea"))
-console.log(occurencesOf("c", "this is this"))
+let allOccurencesOf = function (char, array) {
+  const output = []
+  for (let i = 0; i < array.length; i++) {
+    let count = 0;
+    for (let y = 0; y < array[i].length; y++) {
+      if (array[i][y] === char) {
+        count += 1;
+      }
+    }
+    output.push(count)
+  }
+  return output;
+}
+
+// console.log (allOccurencesOf("l", ["hello", "world", ""]));
